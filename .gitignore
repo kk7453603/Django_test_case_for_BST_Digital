@@ -1,0 +1,4 @@
+test_script.py
+*.xml
+*.iml
+db.sqlite3
