@@ -1,3 +1,4 @@
+import customers.views
 from robots.views import RobotView
 """R4C URL Configuration
 
@@ -19,5 +20,5 @@ from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/robots', RobotView.as_view()),
+    path('mail/',customers.views.test_case_task3)
 ]
