@@ -16,7 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from orders.views import export_production
+from robots.views import RobotView
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('export_models/',export_production)
+    path('export_models/',export_production),
+    path('api/robots', RobotView.as_view()),
 ]
