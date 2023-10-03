@@ -11,8 +11,6 @@ def export_production(request):
         'model', 'version').annotate(count=Count('id'))
     # суть запроса на SQL: SELECT model,version,COUNT(*) FROM robots_robot GROUP BY serial,model
 
-    print(robot_models)
-
     wb = openpyxl.Workbook()
     check_set = set()  # Костыль для неработающего DISTINCT
     for robot_model in robot_models:

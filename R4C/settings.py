@@ -103,6 +103,20 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
+EMAIL_HOST = 'smtp.email-domain.com'
+EMAIL_HOST_USER = 'project@hotmail.com'
+EMAIL_HOST_PASSWORD = '12345678'
+
+ADMINS = (
+    ('Admin_Kirill', 'secret@gmail.com'),
+)
+MANAGERS = ADMINS
+
+if DEBUG:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+else:
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
@@ -114,7 +128,7 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)

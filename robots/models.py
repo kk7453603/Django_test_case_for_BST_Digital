@@ -18,6 +18,3 @@ class Robot(models.Model):
     def clean(self):
         valid_models(self.model, self.version)
 
-    @property
-    def __str__(self):
-        return self.model
