@@ -1,4 +1,3 @@
-from robots.views import RobotView
 """R4C URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -16,8 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
+from orders.views import export_production
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/robots', RobotView.as_view()),
+    path('export_models/',export_production)
 ]
