@@ -1,4 +1,3 @@
-from robots.views import RobotView
 import customers.views
 from robots.views import RobotView
 """R4C URL Configuration

@@ -28,3 +28,5 @@ class RobotView(View):
 
         except ValidationError as e:
             return JsonResponse({'error': e.message_dict}, status=400)
+
+
