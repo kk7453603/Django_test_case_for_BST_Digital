@@ -1,3 +1,6 @@
+from robots.views import RobotView
+import customers.views
+from robots.views import RobotView
 """R4C URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -20,6 +23,7 @@ from robots.views import RobotView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('export_models/',export_production),
     path('api/robots', RobotView.as_view()),
+    path('mail/',customers.views.test_case_task3),
+    path('export_models/',export_production),
 ]
